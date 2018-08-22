@@ -5,6 +5,8 @@ Data systems are defined to include:
 - Database systems
 - Data processing systems
 
+This list is inspired by Reynold Xin's list on [Database Readings](https://github.com/rxin/db-readings).
+
 ## Table of Contents
 1. [Algorithms](#Algorithms)
 2. [Consistency and Consensus](#Consistency-and-Consensus)
@@ -13,9 +15,9 @@ Data systems are defined to include:
 5. [Database Design](#Database-Design)
 6. [Distributed Data Computation](#Distributed-Data-Computation)
 
-## Algorithms
-## Consistency and Consensus
-## Query Processing
-## State and Stream
-## Database Design
-## Distributed Data Computation
+### Algorithms
+### Consistency and Consensus
+### Query Processing
+### State and Stream
+### Database Design
+### Distributed Data Computation
