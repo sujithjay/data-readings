@@ -19,7 +19,7 @@ This list is inspired by Reynold Xin's list on [Database Readings](https://githu
 
 ### Consistency and Consensus
 
-- [Linearizability: A Correctness Condition for Concurrent Objects](http://courses.cs.vt.edu/~cs5204/fall07-kafura/Papers/TransactionalMemory/Linearizability.pdf) (1990): Defines linearizability as a property of a register, as opposed to serializability which is a property of the higher abstraction, 'transaction'.
+- [Linearizability: A Correctness Condition for Concurrent Objects](http://courses.cs.vt.edu/~cs5204/fall07-kafura/Papers/TransactionalMemory/Linearizability.pdf) (1990): Defines linearizability as a correctness condition for a register, as opposed to serializability which is a correctness condition for the higher abstraction, 'transaction'.
 
 ### Query Processing
 
