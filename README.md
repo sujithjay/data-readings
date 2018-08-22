@@ -19,5 +19,6 @@ This list is inspired by Reynold Xin's list on [Database Readings](https://githu
 ### Consistency and Consensus
 ### Query Processing
 ### State and Stream
+- [Data in Flight](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.462.4828&rep=rep1&type=pdf) (2010): Introduces a model of streams as a superset of the relational model. Streams introduce a notion of time (processing-time, IMO) to the relational model. I explore a similar idea in this [post](http://sujithjay.com/data-systems/A-Simple-Dichotomy-for-Modelling-Data-Intensive-Systems/). In a relational table, data is persistent and query is transient; in a stream, query is persistent and data is transient.
 ### Database Design
 ### Distributed Data Computation
