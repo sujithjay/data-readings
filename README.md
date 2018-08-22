@@ -1,4 +1,4 @@
-# Reading List in Data Processing
+# Reading List in Data Systems
 A list of papers, articles, and online resources I have found essential to understanding data-intensive systems and building new data systems. The list is curated and maintained by Sujith Jay Nair ([@sujithjay](https://github.com/sujithjay/)). If you think a paper should be part of this list, please submit a pull request. I will add it to the list once I peruse the paper & am convinced of its utility & novelty. Please make sure the subject-matter of the paper is within the realm of either i) understanding data systems, or ii) building data systems.
 
 Data systems are defined to include:
