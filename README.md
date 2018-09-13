@@ -31,5 +31,16 @@ This list is inspired by Reynold Xin's list on [Database Readings](https://githu
 - [Data in Flight](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.462.4828&rep=rep1&type=pdf) (2010): Introduces a model of streams as a superset of the relational model. Streams introduce a notion of time (processing-time, IMO) to the relational model. I explore a similar idea in this [post](http://sujithjay.com/data-systems/A-Simple-Dichotomy-for-Modelling-Data-Intensive-Systems/). In a relational table, data is persistent and query is transient; in a stream, query is persistent and data is transient.
 
 ### Database Design
+- [Dynamo: Amazon’s Highly Available Key-value Store](https://courses.cs.washington.edu/courses/csep552/18wi/papers/decandia-dynamo.pdf) (2007): This paper on Dynamo (not to be confused with DynamoDB, which is 'built on the principles of Dynamo') is an excellent primer on understanding concepts behind high-availability storage systems; concepts such as Consistent Hashing, Sloppy Quorum, Anti-entropy processes, and Gossip.
+
+- [Cassandra - A Decentralized Structured Storage System](https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf) (2009): Cassandra is one of many data storage systems heavily influenced by Dynamo. However, important differences exist. I summarise some in the table below:
+
+| Problem       | Dynamo        | Cassandra  |
+| ------------- |:-------------:| ----------:|
+| High Availabilty for Writes      | Vector Clocks | Last Write Wins|
+| Temporary Failures | Sloppy Quorum & Hinted Hand-offs      |    Strict Quorum & Hinted Hand-offs  |
+| Partitioning      | Consistent Hashing      |  Consistent Hashing  |
+| Permanent Failures | Anti-entropy using Merkle trees      |    Anti-entropy using Merkle trees |
+| Failure Detection | Gossip Protocols      |    Gossip Protocols |
 
 ### Distributed Data Computation
