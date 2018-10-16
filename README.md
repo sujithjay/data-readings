@@ -5,21 +5,21 @@ Data systems are defined to include:
 - Database systems
 - Data processing systems
 
-This list is inspired by Reynold Xin's list on [Database Readings](https://github.com/rxin/db-readings).
+This list is inspired by Reynold Xin's list on [Database Readings](https://github.com/rxin/db-readings), and is a work in progress.
 
 ## Table of Contents
-1. [Algorithms](#Algorithms)
-2. [Consistency and Consensus](#Consistency-and-Consensus)
-3. [Query Processing](#Query-Processing)
-4. [State and Stream](#State-and-Stream)
-5. [Database Design](#Database-Design)
-6. [Distributed Data Computation](#Distributed-Data-Computation)
-
-### Algorithms
+1. [Consistency and Consensus](#Consistency-and-Consensus)
+2. [Query Processing](#Query-Processing)
+3. [State and Stream](#State-and-Stream)
+4. [Database Design](#Database-Design)
 
 ### Consistency and Consensus
 
 - [Linearizability: A Correctness Condition for Concurrent Objects](http://courses.cs.vt.edu/~cs5204/fall07-kafura/Papers/TransactionalMemory/Linearizability.pdf) (1990): Defines linearizability as a correctness condition for a register, as opposed to serializability which is a correctness condition for the higher abstraction, 'transaction'.
+
+- [On Scalable and Efficient Distributed Failure Detectors](http://www.ict.uom.gr/teaching/distrubutedSite/eceutexas/dist2/papers/On_scalable_and_efficient_distributed_failure_detectors.pdf) (2001): The gossip-inspired failure detection protocol behind Dynamo-family databases. It establishes the optimum worst-case network load for a distributed failure detection scheme, and provides an algorithm of such an optimum scheme.
+
+- [Paxos Made Simple](http://www.cs.utexas.edu/users/lorenzo/corsi/cs380d/past/03F/notes/paxos-simple.pdf) (2001): The consensus protocol behind many distributed systems explained in plain English.
 
 ### Query Processing
 
@@ -33,14 +33,4 @@ This list is inspired by Reynold Xin's list on [Database Readings](https://githu
 ### Database Design
 - [Dynamo: Amazon’s Highly Available Key-value Store](https://courses.cs.washington.edu/courses/csep552/18wi/papers/decandia-dynamo.pdf) (2007): This paper on Dynamo (not to be confused with DynamoDB, which is 'built on the principles of Dynamo') is an excellent primer on understanding concepts behind high-availability storage systems; concepts such as Consistent Hashing, Sloppy Quorum, Anti-entropy processes, and Gossip.
 
-- [Cassandra - A Decentralized Structured Storage System](https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf) (2009): Cassandra is one of many data storage systems heavily influenced by Dynamo. However, important differences exist. I summarise some in the table below:
-
-| Problem       | Dynamo        | Cassandra  |
-| ------------- |:-------------:| ----------:|
-| High Availabilty for Writes      | Vector Clocks | Last Write Wins|
-| Temporary Failures | Sloppy Quorum & Hinted Hand-offs      |    Strict Quorum & Hinted Hand-offs  |
-| Partitioning      | Consistent Hashing      |  Consistent Hashing  |
-| Permanent Failures | Anti-entropy using Merkle trees      |    Anti-entropy using Merkle trees |
-| Failure Detection | Gossip Protocols      |    Gossip Protocols |
-
-### Distributed Data Computation
+- [Cassandra - A Decentralized Structured Storage System](https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf) (2009): Cassandra is one of many data storage systems heavily influenced by Dynamo. However, important differences exist. I have written about it in this [post](https://sujithjay.com/data-systems/Dynamo-vs-Cassandra/).
