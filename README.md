@@ -8,10 +8,10 @@ Data systems are defined to include:
 This list is inspired by Reynold Xin's list on [Database Readings](https://github.com/rxin/db-readings), and is a work in progress.
 
 ## Table of Contents
-1. [Consistency and Consensus](#Consistency-and-Consensus)
-2. [Query Processing](#Query-Processing)
-3. [State and Stream](#State-and-Stream)
-4. [Database Design](#Database-Design)
+1. [Consistency and Consensus](#consistency-and-consensus)
+2. [Query Processing](#query-processing)
+3. [State and Stream](#state-and-stream)
+4. [Database Design](#database-design)
 
 ### Consistency and Consensus
 
