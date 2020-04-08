@@ -27,6 +27,11 @@ This list is inspired by Reynold Xin's list on [Database Readings](https://githu
 
 - [Spark SQL: Relational Data Processing in Spark](https://people.csail.mit.edu/matei/papers/2015/sigmod_spark_sql.pdf) (2015): Explains the design of a distributed relational processing system in Apache Spark.
 
+- [How to Architect a Query Compiler, Revisited](https://www.cs.purdue.edu/homes/rompf/papers/tahboub-sigmod18.pdf) (2018): A study on how to design a query compiler from a query interpreter. There are places where the lack of foundational background might hamper your progress in reading this paper. For this, I would suggest skimming [Query Evaluation Techniques for Large Databases](http://infolab.stanford.edu/~hyunjung/cs346/graefe.pdf) as a primer. Also, I would suggest reading the [HyPer](https://www.vldb.org/pvldb/vol4/p539-neumann.pdf) paper (a part of this list as well) before reading this one.
+
+- [Efficiently Compiling Efficient Query Plans for Modern Hardware](https://www.vldb.org/pvldb/vol4/p539-neumann.pdf) (2011): Also known as the HyPer paper, this paper introduced data-centric query evaluation as an alternative to the the traditional iterative approach.
+
+
 ### State and Stream
 - [Data in Flight](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.462.4828&rep=rep1&type=pdf) (2010): Introduces a model of streams as a superset of the relational model. Streams introduce a notion of time (processing-time, IMO) to the relational model. I explore a similar idea in this [post](http://sujithjay.com/data-systems/A-Simple-Dichotomy-for-Modelling-Data-Intensive-Systems/). In a relational table, data is persistent and query is transient; in a stream, query is persistent and data is transient.
 
