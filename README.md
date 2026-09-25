@@ -1,5 +1,5 @@
 # Reading List in Data Systems
-A list of papers, articles, and online resources I have found essential to understanding data-intensive systems and building new data systems. The list is curated and maintained by Sujith Jay Nair ([@sujithjay](https://github.com/sujithjay/)). If you think a paper should be part of this list, please submit a pull request. I will add it to the list once I peruse the paper. Please make sure the subject-matter of the paper is within the realm of either i) understanding data systems, or ii) building data systems.
+A list of papers, articles, and online resources I have found essential to understanding data-intensive systems and building new data systems. The list is curated and maintained by Sujith Jay Nair ([@sujithjay](https://github.com/sujithjay/)). If you think a paper should be part of this list, please submit a pull request. I will add it to the list once I read the paper. Please make sure the subject-matter of the paper is within the realm of either i) understanding data systems, or ii) building data systems.
 
 Data systems are defined to include:
 - Database systems
@@ -34,7 +34,7 @@ _Last updated: September 2026._
 
 - [Efficiently Compiling Efficient Query Plans for Modern Hardware](https://www.vldb.org/pvldb/vol4/p539-neumann.pdf) (2011): Also known as the HyPer paper, this paper introduced data-centric query evaluation as an alternative to the the traditional iterative approach.
 
-- [Everything You Always Wanted to Know About Compiled and Vectorized Queries But Were Afraid to Ask](http://www.vldb.org/pvldb/vol11/p2209-kersten.pdf) (2018): Compares the two dominant designs for fast query engines, data-centric compilation (as in HyPer) and vectorized interpretation (as in VectorWise), by implementing both in the same system. Neither wins outright: compilation is faster on computation-heavy queries, while vectorization is better at hiding memory stalls. A good companion to the HyPer paper above.
+- [Everything You Always Wanted to Know About Compiled and Vectorized Queries But Were Afraid to Ask](http://www.vldb.org/pvldb/vol11/p2209-kersten.pdf) (2018): It compares the two dominant designs for fast query engines, data-centric compilation (as in HyPer) and vectorized interpretation (as in VectorWise), by implementing both in the same system. Neither wins outright: compilation is faster on computation-heavy queries, while vectorization is better at hiding memory stalls. A good companion to the HyPer paper above.
 
 - [Integration of Large-Scale Data Processing Systems and Traditional Parallel Database Technology](http://www.vldb.org/pvldb/vol12/p2290-abouzied.pdf) (2019): HadoopDB was a 2009 prototype of a hybrid SQL system, combining the Hadoop MapReduce framework with parallel database management systems. This paper revisits its design choices and investigates its legacy in existing data systems, which makes it a great review of the state of modern data analysis systems. My notes on it are [here](https://sujithjay.com/hadoopdb).
 
@@ -50,7 +50,7 @@ _Last updated: September 2026._
 
 - [State Management in Apache Flink: Consistent Stateful Distributed Stream Processing](http://www.vldb.org/pvldb/vol10/p1718-carbone.pdf) (2017): How Flink keeps large operator state consistent. Asynchronous snapshots, coordinated by barriers that flow with the stream, give exactly-once state semantics, and state partitioned into key groups lets a running job be rescaled.
 
-- [Providing Streaming Joins as a Service at Facebook](http://www.vldb.org/pvldb/vol11/p1809-jacques-silva.pdf) (2018): Stream-stream joins trade off output latency, join accuracy and memory footprint. This paper describes Facebook's streaming join service, which sits in the middle of that trade-off: joins are best-effort, and accuracy improves by pacing the consumption of input streams with dynamically estimated event-time watermarks. My notes on it are [here](https://sujithjay.com/streaming-joins-at-facebook).
+- [Providing Streaming Joins as a Service at Facebook](http://www.vldb.org/pvldb/vol11/p1809-jacques-silva.pdf) (2018): Stream-stream joins trade off output latency, join accuracy and memory footprint. This paper describes streaming join service at Facebook, which makes interesting choices around that trade off: joins are best-effort, and accuracy improves by pacing the consumption of input streams with dynamically estimated event-time watermarks. My notes on it are [here](https://sujithjay.com/streaming-joins-at-facebook).
 
 ### Database Design
 - [Dynamo: Amazon’s Highly Available Key-value Store](https://courses.cs.washington.edu/courses/csep552/18wi/papers/decandia-dynamo.pdf) (2007): This paper on Dynamo (not to be confused with DynamoDB, which is 'built on the principles of Dynamo') is an excellent primer on understanding concepts behind high-availability storage systems; concepts such as Consistent Hashing, Sloppy Quorum, Anti-entropy processes, and Gossip.
